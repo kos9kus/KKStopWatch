@@ -1,0 +1,6 @@
+framework module KKStopManagerSDK {
+  umbrella header "KKStopManagerSDK.h"
+
+  export *
+  module * { export * }
+}

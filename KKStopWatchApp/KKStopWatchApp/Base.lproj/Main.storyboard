@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cec-ic-zlh">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="hyc-JA-BiY">
+            <objects>
+                <viewController id="cec-ic-zlh" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u7E-BO-Kiu"/>
+                        <viewControllerLayoutGuide type="bottom" id="QAZ-Ec-ZRX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RD5-7E-UbO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01w-lO-1Y1">
+                                <rect key="frame" x="20" y="79" width="560" height="35"/>
+                                <color key="backgroundColor" red="0.81783785990000002" green="0.81783785990000002" blue="0.81783785990000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="vWy-j6-Qx6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="3" translatesAutoresizingMaskIntoConstraints="NO" id="kmo-n6-Gmc">
+                                <rect key="frame" x="20" y="214" width="560" height="29"/>
+                                <segments>
+                                    <segment title="Start"/>
+                                    <segment title="Pause"/>
+                                    <segment title="Continue"/>
+                                    <segment title="Reset"/>
+                                </segments>
+                                <connections>
+                                    <action selector="didChangedSegmentControll:" destination="cec-ic-zlh" eventType="valueChanged" id="QoE-GH-RYb"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STOPWATCH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8l-bp-ssT">
+                                <rect key="frame" x="20" y="28" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="01w-lO-1Y1" firstAttribute="top" secondItem="q8l-bp-ssT" secondAttribute="bottom" constant="30" id="9US-6B-3Ha"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="01w-lO-1Y1" secondAttribute="trailing" id="9qM-sz-SfD"/>
+                            <constraint firstItem="q8l-bp-ssT" firstAttribute="leading" secondItem="RD5-7E-UbO" secondAttribute="leadingMargin" id="Anz-Ye-GgF"/>
+                            <constraint firstItem="q8l-bp-ssT" firstAttribute="top" secondItem="u7E-BO-Kiu" secondAttribute="bottom" constant="8" id="HCs-Fr-z6D"/>
+                            <constraint firstItem="01w-lO-1Y1" firstAttribute="leading" secondItem="RD5-7E-UbO" secondAttribute="leadingMargin" id="KK5-zl-tJb"/>
+                            <constraint firstItem="kmo-n6-Gmc" firstAttribute="leading" secondItem="RD5-7E-UbO" secondAttribute="leadingMargin" id="PRm-Ze-uFr"/>
+                            <constraint firstItem="kmo-n6-Gmc" firstAttribute="top" secondItem="01w-lO-1Y1" secondAttribute="bottom" constant="100" id="RIN-02-cwE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kmo-n6-Gmc" secondAttribute="trailing" id="fUh-TU-FKL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="q8l-bp-ssT" secondAttribute="trailing" id="hni-hN-gXh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="labelTimer" destination="01w-lO-1Y1" id="Wye-Cd-neR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uBE-4X-IIZ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="378" y="361"/>
+        </scene>
+    </scenes>
+</document>
